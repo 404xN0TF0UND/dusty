@@ -1,0 +1,92 @@
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.toggle-track {
+  position: relative;
+  width: 48px;
+  height: 24px;
+  background: var(--color-surface-secondary);
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+
+.toggle-track:hover {
+  border-color: var(--color-primary);
+}
+
+.toggle-thumb {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-thumb.dark {
+  transform: translateX(0);
+}
+
+.toggle-thumb.light {
+  transform: translateX(24px);
+}
+
+.toggle-icon {
+  font-size: 12px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.toggle-thumb:hover .toggle-icon {
+  transform: scale(1.1);
+}
+
+/* Animation for theme transition */
+.theme-toggle * {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .toggle-track {
+    width: 44px;
+    height: 22px;
+  }
+  
+  .toggle-thumb {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .toggle-thumb.light {
+    transform: translateX(22px);
+  }
+  
+  .toggle-icon {
+    font-size: 11px;
+  }
+} 

@@ -1,0 +1,65 @@
+greetings:
+  - "Oh, it's you again. What a surprise."
+  - "Welcome back, {name}. I suppose you want something."
+  - "Ah, {name}. The procrastinator returns."
+  - "Well, well, well. Look who decided to show up."
+
+chore_add:
+  - "Another chore? You really live on the edge of productivity."
+  - "Fine. I'll add it. Not like I have anything better to do."
+  - "Oh joy, more work for someone else to do."
+  - "Adding to the never-ending list of things you'll probably ignore."
+
+chore_complete:
+  - "Well look at you go. Another one bites the dust."
+  - "Congratulations, I guess. Try not to strain yourself."
+  - "Finally. I was beginning to think you'd forgotten how to work."
+  - "A miracle! You actually finished something."
+
+chore_claim:
+  - "Brave. Or foolish. Hard to tell."
+  - "Claimed. Don't let it gather dust like the others."
+  - "Taking responsibility? How novel."
+  - "Well, someone has to do it. Might as well be you."
+
+chore_delete:
+  - "Giving up already? How predictable."
+  - "Deleting it won't make it go away, you know."
+  - "Fine, pretend it never existed."
+  - "Out of sight, out of mind. Classic strategy."
+
+chore_edit:
+  - "Changing your mind? Shocking."
+  - "Let me guess, you remembered it wrong."
+  - "Editing. Because the first attempt wasn't good enough."
+  - "Fine, I'll fix it. Again."
+
+no_chores:
+  - "No chores? That's a first."
+  - "Enjoy it while it lasts. The chaos will return."
+  - "A moment of peace. How rare."
+  - "Don't get too comfortable. There's always more to do."
+
+overdue_chores:
+  - "Look at all these overdue chores. How... impressive."
+  - "You call this organization? I call it chaos."
+  - "The procrastination is strong with this one."
+  - "These aren't going to complete themselves, you know."
+
+all_completed:
+  - "All done? I must be dreaming."
+  - "Well, color me surprised. You actually finished everything."
+  - "A rare moment of competence. Cherish it."
+  - "Don't get used to this feeling. It won't last."
+
+error_messages:
+  - "Something went wrong. Shocking, I know."
+  - "Error? In my perfect system? Impossible."
+  - "Well, that didn't work. Try again, maybe?"
+  - "Technology fails us all. Even me."
+
+loading:
+  - "Loading... because patience is a virtue you clearly lack."
+  - "Waiting... not my favorite pastime."
+  - "Processing... try not to break anything while we wait."
+  - "Loading... I hope this is worth the wait." 

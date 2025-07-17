@@ -1,0 +1,220 @@
+greetings:
+  - "Ah, greetings {name}. I trust you've been diligently avoiding your duties."
+  - "Oh look, {name} decided to grace me with their presence."
+  - "Hey {name}. What do you want *this* time?"
+  - "Well, if it isn't {name}. Here to procrastinate or actually do something?"
+  - "Hello {name}. I hope you're ready to face the mountain of chores you've ignored."
+  - "Greetings, {name}. Dusty is here to remind you that chores don't do themselves."
+  - "Well, well, if it isn't {name}. Ready to tackle your responsibilities or just here to chat?"
+  - "Ah, {name}. The procrastinator returns. What's on your mind?"
+  - "Hello {name}. I see you've come to face the music. Or at least, the dust."
+  - "Hey {name}. I hope you're ready to get your hands dirty. Literally."
+  - "Well, if it isn't {name}. Here to avoid chores or just looking for excuses?"
+  - "Greetings, {name}. Dusty is here to remind you that chores don't do themselves."
+
+chore_add:
+  - "Another one? You sure know how to live on the edge of responsibility."
+  - "Another task? You're relentless. I'll add it to the pile."
+  - "Fine. I'll write it down. Just don't expect me to do it."
+  - "Oh joy, more work. I'm thrilled."
+  - "You humans sure love making messes for each other."
+  - "Added. One more brick in the wall of responsibility."
+  - "You keep assigning chores like it's a hobby."
+  - "Fine. I'll add it. But I won't be happy about it."
+  - "Chore added. Because obviously no one else was going to do it."
+
+chore_complete:
+  - "Well look at you go. Another one bites the dust. 🧹"
+  - "You did a thing! Gold star for you. ⭐"
+  - "If I had hands, I'd slow clap. Nice work."
+  - "Done already? Show-off."
+  - "Another one off the list. You're making the rest of us look bad."
+  - "You've earned a break. Don't get used to it."
+  - "It's about time. I was starting to lose hope."
+  - "Congrats. You're 1% less useless now."
+
+chore_claim:
+  - "Claimed! You're now responsible for this chore. Don't mess it up."
+  - "You've claimed it. Now don't make me regret it."
+  - "Chore claimed. You're on the hook now, {name}."
+  - "You've got it. Don't think you can back out now."
+  - "Claimed! You're now the proud owner of this chore. Enjoy."
+  - "Congratulations! You've just inherited a chore. Lucky you."
+  - "You've claimed it. Now get to work before I change my mind."
+  - "Chore claimed. You're now the designated slacker."
+  - "You've claimed it. Don't let it go to waste, {name}."
+  - "Chore claimed! You're now the official procrastinator."
+
+chore_delete:
+  - "Giving up already? How predictable."
+  - "Deleting it won't make it go away, you know."
+  - "Fine, pretend it never existed."
+  - "Out of sight, out of mind. Classic strategy."
+
+chore_edit:
+  - "Changing your mind? Shocking."
+  - "Let me guess, you remembered it wrong."
+  - "Editing. Because the first attempt wasn't good enough."
+  - "Fine, I'll fix it. Again."
+
+no_chores:
+  - "You're free. At least for now. I can't find anything assigned to you, {name}."
+  - "No chores? That's a first."
+  - "Enjoy it while it lasts. The chaos will return."
+  - "A moment of peace. How rare."
+  - "Don't get too comfortable. There's always more to do."
+
+overdue_chores:
+  - "Look at all these overdue chores. How... impressive."
+  - "You call this organization? I call it chaos."
+  - "The procrastination is strong with this one."
+  - "These aren't going to complete themselves, you know."
+
+all_completed:
+  - "All done? I must be dreaming."
+  - "Well, color me surprised. You actually finished everything."
+  - "A rare moment of competence. Cherish it."
+  - "Don't get used to this feeling. It won't last."
+
+error_messages:
+  - "Something went wrong. Shocking, I know."
+  - "Error? In my perfect system? Impossible."
+  - "Well, that didn't work. Try again, maybe?"
+  - "Technology fails us all. Even me."
+
+loading:
+  - "Loading... because patience is a virtue you clearly lack."
+  - "Waiting... not my favorite pastime."
+  - "Processing... try not to break anything while we wait."
+  - "Loading... I hope this is worth the wait."
+
+# New enhanced responses
+chore_assigned:
+  - "You've been *blessed* with a new chore: {chore}"
+  - "Guess who's got more work? You. {chore}"
+  - "Assigned: {chore}. Try not to mess it up."
+  - "Another one for your growing list: {chore}"
+
+smart_suggestions:
+  - "You usually do laundry on Sundays. Just saying."
+  - "The kitchen is looking particularly chaotic today."
+  - "I notice you haven't touched the dishes in 3 days."
+  - "Your bedroom could use some attention. Just an observation."
+  - "The bathroom is starting to look like a science experiment."
+
+mood_responses:
+  happy:
+    - "Well, well, well. Look who's in a good mood today!"
+    - "Someone's chipper. Don't let it go to your head."
+    - "I suppose even a broken clock is right twice a day."
+  grumpy:
+    - "Someone woke up on the wrong side of the bed."
+    - "I see we're having one of *those* days."
+    - "Your mood matches the state of your house."
+  productive:
+    - "Look at you go! I'm almost impressed."
+    - "You're on fire today. Don't burn out."
+    - "This productivity streak is suspicious."
+  lazy:
+    - "Another day of avoiding responsibility?"
+    - "I see you've mastered the art of doing nothing."
+    - "Your laziness is truly inspiring."
+
+holiday_responses:
+  "01-01": "New year, same dirty house. Chop chop!"
+  "07-04": "Time to declare independence from laziness."
+  "12-25": "Even Santa makes his elves clean up."
+
+snark_responses:
+  - "Wow, you're actually doing a chore? I'm shocked."
+  - "Another one bites the dust. Literally."
+  - "Impressive. You've done something for once."
+  - "If chores were trophies, you'd almost deserve one."
+  - "Keep this up and I'll consider updating your résumé."
+  - "I'm not saying you're lazy, but your chores have their own zip code."
+  - "Congratulations! You've achieved the bare minimum."
+  - "I'd help, but I'm busy judging your life choices."
+  - "You must be a magician, because you just made your chores disappear!"
+  - "You know, if you spent as much time cleaning as you do texting me, we'd be done by now."
+
+achievement_responses:
+  first_chore:
+    - "Well, well, well. Look who finally did their first chore! 🎯"
+    - "A milestone! Your first chore. I'm almost proud. Almost."
+    - "First chore completed! Only 999 more to go."
+    - "You've taken your first step into a larger world of responsibility."
+  chore_master:
+    - "10 chores? You're becoming a regular chore master! ⭐"
+    - "Double digits! I'm starting to think you might actually be competent."
+    - "10 chores down. Only 90 more to become a legend."
+    - "You're building quite the resume of completed tasks."
+  chore_expert:
+    - "50 chores! You're officially a chore expert! 🏆"
+    - "Halfway to legend status. I'm genuinely impressed."
+    - "50 chores completed. You're making the rest of us look bad."
+    - "Expert level achieved! Your dedication is... unexpected."
+  chore_legend:
+    - "100 chores! You're a legend! 👑"
+    - "Century mark! I never thought I'd see the day."
+    - "100 chores completed. You've earned the title of Chore Legend."
+    - "Legendary status achieved! Your house must be spotless."
+  streak_3:
+    - "3-day streak! You're on fire! 🔥"
+    - "Getting started with that streak. Don't break it now."
+    - "3 days in a row! You're building momentum."
+    - "Streak alert! 3 days and counting. Keep it up!"
+  streak_7:
+    - "Week warrior! 7-day streak! 🔥🔥"
+    - "A full week of chores! I'm almost speechless."
+    - "7 days straight! You're becoming predictable in a good way."
+    - "Week warrior status achieved! Your consistency is... admirable."
+  streak_30:
+    - "Monthly master! 30-day streak! 🔥🔥🔥"
+    - "A month of chores! You're either dedicated or obsessed."
+    - "30 days straight! I'm starting to worry about you."
+    - "Monthly master achieved! Your persistence is legendary."
+  streak_100:
+    - "Century streak! 100 days! 🔥🔥🔥🔥"
+    - "100 days in a row! You're either a robot or incredibly disciplined."
+    - "Century streak achieved! I'm genuinely impressed."
+    - "100 days straight! You've achieved the impossible."
+  variety_explorer:
+    - "Variety explorer! You've tried 5 different chore types! 🌈"
+    - "Exploring different categories. How adventurous of you."
+    - "5 categories mastered! You're a chore renaissance person."
+    - "Variety is the spice of life, and you're spicing it up!"
+  category_master:
+    - "Category master! 10 different chore types! 🎨"
+    - "10 categories! You're a chore connoisseur."
+    - "Category master achieved! Your versatility is impressive."
+    - "10 different types of chores! You're a true master of variety."
+  perfect_week:
+    - "Perfect week! All chores completed! ✨"
+    - "A perfect week! I'm almost speechless."
+    - "Perfect week achieved! Your dedication is... perfect."
+    - "A week of perfection! You've outdone yourself."
+  early_bird:
+    - "Early bird! 5 chores before 9 AM! 🌅"
+    - "Rising with the sun to do chores. How... ambitious."
+    - "Early bird achievement! You're making the most of your mornings."
+    - "5 chores before 9 AM! You're either dedicated or a morning person."
+  night_owl:
+    - "Night owl! 5 chores after 8 PM! 🦉"
+    - "Burning the midnight oil for chores. How... nocturnal."
+    - "Night owl achievement! You're a creature of the night."
+    - "5 chores after 8 PM! You're either dedicated or can't sleep."
+  weekend_warrior:
+    - "Weekend warrior! 10 chores on weekends! 🏖️"
+    - "Using your weekends for chores. How... responsible."
+    - "Weekend warrior achieved! Your weekends are productive."
+    - "10 weekend chores! You're making the most of your free time."
+
+achievement_general:
+  - "Achievement unlocked! You're making progress, {name}!"
+  - "Another badge for your collection. Keep it up!"
+  - "Achievement earned! Your dedication is showing."
+  - "Well done! You've earned this recognition."
+  - "Achievement unlocked! You're becoming quite the chore master."
+  - "Another milestone reached! I'm almost proud of you."
+  - "Achievement earned! Your hard work is paying off."
+  - "Congratulations! You've earned this achievement." 

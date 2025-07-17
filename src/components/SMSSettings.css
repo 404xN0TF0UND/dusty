@@ -1,0 +1,370 @@
+.sms-settings {
+  background: var(--color-surface);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--color-border);
+}
+
+.sms-settings h3 {
+  margin: 0 0 1rem 0;
+  color: var(--color-text);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.sms-description {
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.phone-registration {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--color-surface-secondary);
+  border-radius: 8px;
+  border-left: 4px solid var(--color-primary);
+}
+
+.phone-registration h4 {
+  margin: 0 0 1rem 0;
+  color: var(--color-text);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.registered-phone {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--color-surface);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.phone-label {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.phone-number {
+  font-family: monospace;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.phone-input-section {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.phone-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.phone-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.1);
+}
+
+.sms-testing {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--color-surface-secondary);
+  border-radius: 8px;
+  border-left: 4px solid #22c55e;
+}
+
+.sms-testing h4 {
+  margin: 0 0 1rem 0;
+  color: var(--color-text);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.test-description {
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.quick-tests h5 {
+  margin: 0 0 1rem 0;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.quick-test-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.quick-test-btn {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.quick-test-btn:hover:not(:disabled) {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.quick-test-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.custom-test h5 {
+  margin: 0 0 1rem 0;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.test-input-section {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.test-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.test-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.1);
+}
+
+.test-response {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--color-surface);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.test-response h5 {
+  margin: 0 0 1rem 0;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.response-content {
+  background: var(--color-surface-secondary);
+  border-radius: 6px;
+  padding: 1rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.response-content pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--color-text);
+}
+
+.sms-commands {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--color-surface-secondary);
+  border-radius: 8px;
+  border-left: 4px solid #f59e0b;
+}
+
+.sms-commands h4 {
+  margin: 0 0 1rem 0;
+  color: var(--color-text);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.commands-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.command-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: var(--color-surface);
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+}
+
+.command {
+  font-family: monospace;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: rgba(var(--color-primary-rgb), 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  min-width: 120px;
+  text-align: center;
+}
+
+.description {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.sms-info {
+  padding: 1.5rem;
+  background: var(--color-surface-secondary);
+  border-radius: 8px;
+  border-left: 4px solid #06b6d4;
+}
+
+.sms-info h4 {
+  margin: 0 0 1rem 0;
+  color: var(--color-text);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.sms-info ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.sms-info li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sms-settings {
+    padding: 1.5rem;
+  }
+
+  .phone-input-section,
+  .test-input-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .phone-input,
+  .test-input {
+    width: 100%;
+  }
+
+  .registered-phone {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .quick-test-buttons {
+    flex-direction: column;
+  }
+
+  .quick-test-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .command-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .command {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+/* Enhanced animations */
+.sms-settings {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quick-test-btn,
+.command-item {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.quick-test-btn:hover:not(:disabled),
+.command-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading state */
+.test-input-section button:disabled {
+  position: relative;
+  overflow: hidden;
+}
+
+.test-input-section button:disabled::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+} 

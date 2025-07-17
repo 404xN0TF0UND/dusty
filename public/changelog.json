@@ -1,0 +1,22 @@
+[
+  {
+    "version": "2024-06-10",
+    "date": "2024-06-10",
+    "changes": [
+      "✨ User management panel for admins",
+      "🖼️ Avatar upload for all users",
+      "🔔 Automated changelog in What's New modal"
+    ]
+  },
+  {
+    "version": "2024-06-09",
+    "date": "2024-06-09",
+    "changes": [
+      "✨ Improved PWA install prompt and offline experience",
+      "🔔 Interactive push notifications (Complete, Snooze chores)",
+      "📊 Performance Dashboard and Achievements moved to Admin Tools",
+      "🧹 UI polish and header cleanup",
+      "📱 SMS features removed for now (coming back in a future upgrade!)"
+    ]
+  }
+] 

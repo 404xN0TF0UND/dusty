@@ -1,0 +1,196 @@
+.notification-settings {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notification-settings h3 {
+  margin: 0 0 20px 0;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+}
+
+.notification-settings h4 {
+  margin: 15px 0 10px 0;
+  color: var(--text-primary);
+  font-size: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 5px;
+}
+
+.permission-section {
+  margin-bottom: 25px;
+}
+
+.permission-status {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.status-badge.granted {
+  background: var(--success-bg);
+  color: var(--success-text);
+}
+
+.status-badge.denied {
+  background: var(--error-bg);
+  color: var(--error-text);
+}
+
+.status-badge.default {
+  background: var(--warning-bg);
+  color: var(--warning-text);
+}
+
+.settings-section {
+  margin-bottom: 25px;
+}
+
+.setting-item {
+  margin-bottom: 15px;
+  padding: 12px;
+  background: var(--input-bg);
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.setting-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.setting-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-color);
+}
+
+.setting-label:has(input:disabled) {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.setting-description {
+  margin: 5px 0 0 28px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.quiet-hours-config {
+  margin-top: 15px;
+  padding: 15px;
+  background: var(--card-bg);
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.time-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.time-input:last-child {
+  margin-bottom: 0;
+}
+
+.time-input label {
+  font-weight: 500;
+  color: var(--text-primary);
+  min-width: 80px;
+}
+
+.time-input input[type="time"] {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.time-input input[type="time"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px var(--primary-color-alpha);
+}
+
+.test-section {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.test-section button {
+  margin-bottom: 10px;
+}
+
+.notification-warning {
+  padding: 15px;
+  background: var(--warning-bg);
+  border: 1px solid var(--warning-border);
+  border-radius: 6px;
+  color: var(--warning-text);
+}
+
+.notification-warning p {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .notification-settings {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .setting-item {
+  background: var(--input-bg);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .quiet-hours-config {
+  background: var(--input-bg);
+  border-color: var(--border-color);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .notification-settings {
+    padding: 15px;
+    margin: 15px 0;
+  }
+  
+  .permission-status {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .time-input {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .time-input label {
+    min-width: auto;
+  }
+} 

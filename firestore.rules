@@ -1,0 +1,130 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+             get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    function isValidChore() {
+      let chore = resource.data;
+      return chore.keys().hasAll(['title', 'description', 'assigneeId', 'priority', 'category', 'createdAt', 'updatedAt']) &&
+             chore.title is string && chore.title.size() > 0 && chore.title.size() <= 100 &&
+             chore.description is string && chore.description.size() <= 500 &&
+             chore.assigneeId is string &&
+             chore.priority in ['low', 'medium', 'high'] &&
+             chore.category is string && chore.category.size() > 0 &&
+             chore.createdAt is timestamp &&
+             chore.updatedAt is timestamp;
+    }
+    
+    function isValidUser(isCreate) {
+      let user = resource.data;
+      return user.keys().hasAll(['displayName', 'email', 'role']) &&
+             user.displayName is string && user.displayName.size() > 0 &&
+             user.email is string && user.email.matches('^[^@]+@[^@]+\\.[^@]+$') &&
+             user.role in ['admin', 'member'] &&
+             (isCreate || (user.createdAt is timestamp));
+    }
+
+    // Users collection
+    match /users/{userId} {
+      allow read: if isAuthenticated() && (isOwner(userId) || isAdmin());
+      allow create: if isAuthenticated() && (isOwner(userId) || isAdmin()) &&
+        request.resource.data.keys().hasAll(['displayName', 'email', 'role', 'createdAt', 'lastLoginAt']) &&
+        request.resource.data.displayName is string &&
+        request.resource.data.email is string &&
+        request.resource.data.role in ['admin', 'member'] &&
+        request.resource.data.createdAt is timestamp &&
+        request.resource.data.lastLoginAt is timestamp;
+      allow update: if isAuthenticated() && (isOwner(userId) || isAdmin()) &&
+        request.resource.data.displayName is string &&
+        request.resource.data.email is string &&
+        request.resource.data.createdAt is timestamp &&
+        request.resource.data.lastLoginAt is timestamp &&
+        (isAdmin() || resource.data.role == request.resource.data.role);
+      allow delete: if isAdmin();
+    }
+
+    // Chores collection
+    match /chores/{choreId} {
+      // Users can read chores assigned to them or unassigned chores
+      // Admins can read all chores
+      allow read: if isAuthenticated() && 
+        (isAdmin() || 
+         resource.data.assigneeId == request.auth.uid || 
+         resource.data.assigneeId == '');
+      
+      // Users can create chores (they become the assignee by default)
+      // Admins can create chores for anyone
+      allow create: if isAuthenticated() && 
+        (isAdmin() || request.resource.data.assigneeId == request.auth.uid) &&
+        isValidChore();
+      
+      // Users can update chores assigned to them
+      // Admins can update any chore
+      allow update: if isAuthenticated() && 
+        (isAdmin() || resource.data.assigneeId == request.auth.uid) &&
+        isValidChore();
+      
+      // Only admins can delete chores
+      allow delete: if isAdmin();
+    }
+
+    // Chore templates collection (if you add this feature)
+    match /choreTemplates/{templateId} {
+      // Everyone can read templates
+      allow read: if isAuthenticated();
+      
+      // Only admins can create/update/delete templates
+      allow write: if isAdmin();
+    }
+
+    // Achievements collection (if you add this feature)
+    match /achievements/{achievementId} {
+      // Users can read their own achievements
+      allow read: if isAuthenticated() && 
+        (isAdmin() || resource.data.userId == request.auth.uid);
+      
+      // System can create achievements for users
+      allow create: if isAuthenticated() && 
+        (isAdmin() || request.resource.data.userId == request.auth.uid);
+      
+      // Only admins can update/delete achievements
+      allow update, delete: if isAdmin();
+    }
+
+    // Notifications collection (if you add this feature)
+    match /notifications/{notificationId} {
+      // Users can read their own notifications
+      allow read: if isAuthenticated() && 
+        (isAdmin() || resource.data.userId == request.auth.uid);
+      
+      // System can create notifications for users
+      allow create: if isAuthenticated() && 
+        (isAdmin() || request.resource.data.userId == request.auth.uid);
+      
+      // Users can update their own notifications (mark as read)
+      // Admins can update any notification
+      allow update: if isAuthenticated() && 
+        (isAdmin() || resource.data.userId == request.auth.uid);
+      
+      // Only admins can delete notifications
+      allow delete: if isAdmin();
+    }
+
+    // Deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+} 

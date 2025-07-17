@@ -1,0 +1,116 @@
+.update-prompt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+
+.update-prompt {
+  background: var(--color-surface);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  max-width: 90vw;
+  width: 400px;
+  padding: 2rem;
+  text-align: center;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.update-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.update-content h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--color-text);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.update-content p {
+  margin: 0 0 1.5rem 0;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.update-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.update-actions .btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 100px;
+}
+
+.update-actions .btn:hover {
+  transform: translateY(-1px);
+}
+
+.update-actions .btn-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.update-actions .btn-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.update-actions .btn-secondary {
+  background: var(--color-surface-elevated);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.update-actions .btn-secondary:hover {
+  background: var(--color-surface);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .update-prompt {
+    width: 95vw;
+    padding: 1.5rem;
+  }
+  
+  .update-actions {
+    flex-direction: column;
+  }
+  
+  .update-actions .btn {
+    width: 100%;
+  }
+} 

@@ -1,0 +1,58 @@
+{
+  "short_name": "Dusty's Chores",
+  "name": "Dusty's Chores - Your Grumpy Digital Butler",
+  "description": "A chore management app with a sarcastic butler named Dusty.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#23272e",
+  "background_color": "#181c20",
+  "orientation": "portrait-primary",
+  "categories": ["productivity", "utilities", "household", "family"],
+  "lang": "en",
+  "shortcuts": [
+    {
+      "name": "Add Chore",
+      "short_name": "Add Chore",
+      "description": "Quickly add a new chore",
+      "url": "/?section=add",
+      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "View Stats",
+      "short_name": "Stats",
+      "description": "View household chore statistics",
+      "url": "/?section=stats",
+      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Chat with Dusty",
+      "short_name": "Chat",
+      "description": "Open Dusty's chat bubble",
+      "url": "/?chat=open",
+      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    { "src": "screenshot1.png", "sizes": "540x960", "type": "image/png", "label": "Chore List" },
+    { "src": "screenshot2.png", "sizes": "540x960", "type": "image/png", "label": "Dusty Chat" }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
